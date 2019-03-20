@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "+";
 
 client.on('ready', () => {
-  console.log(Logged in as ${client.user.tag}!);
- ² client.user.setGame(+help |By Medooo,"http://twitch.tv/Death Shop")
+  console.log(`Logged in as ${client.user.tag}!`);
+ client.user.setGame(+help |By Medooo_96,"http://twitch.tv/DeathShop")
 });
 
 
