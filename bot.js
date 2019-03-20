@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- client.user.setGame(+help |By Medooo_96,"http://twitch.tv/DeathShop")
+ client.user.setGame(+help |Medooo_bot,"http://twitch.tv/DeathShop")
 });
 
 
