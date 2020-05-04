@@ -52,7 +52,7 @@ client.on('message', msg => {  //MEDOOO_96#6699
        var nam = args.join(' ');
     
       if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('`ADMINISTRATOR` للأسف هذه الخاصية تحتاج الى ').then(msg => msg.delete(6000))
-      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))  //WESO#0001
+      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))  //MEDOOO_96#6699
       message.guild.createChannel(nam, 'voice').then(c => setTimeout(() => c.delete(), 120000))   //WESO#0001
       message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000)) 
     }
@@ -63,7 +63,7 @@ client.on("message", message => {    //MEDOOO_96#6699
         if(message.author.bot) return;  //MEDOOO_96#6699
         var emojiid =  message.content.split(" ").slice(1).join(" ")   //MEDOOO_96#6699
         console.log(emojiid) 
-        if(emojiid.length < "18" || emojiid.length > "18" || isNaN(emojiid)) return  message.channel.send(`- Usage  //WESO#0001
+        if(emojiid.length < "18" || emojiid.length > "18" || isNaN(emojiid)) return  message.channel.send(`- Usage  //MEDOOO_96#6699
 ${prefix}emoji <EmojiID>`); 
         else    
         message.channel.send("This is the emoji that you requested:-",  //MEDOOO_96#6699
@@ -103,7 +103,7 @@ client.on('message',async message => {  //MEDOOO_96#6699
   let nameClan;  //MEDOOO_96#6699
   let membersClan = [];  //MEDOOO_96#6699
   let levelClan = 0;  //MEDOOO_96#6699
-  if(!system[author.id]) system[author.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  //WESO#0001
+  if(!system[author.id]) system[author.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  //MEDOOO_96#6699
  
   if(!level[author.id]) level[author.id] = {level: 1, xp: 1};  //MEDOOO_96#6699
  
