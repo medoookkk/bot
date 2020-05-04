@@ -142,6 +142,10 @@ client.on('message',async message => {  //MEDOOO_96#6699
   .setFooter(message.author.username, message.author.avatarURL);  //MEDOOO_96#6699
   message.channel.send(embed);
 }
+     client.on('guildMemberAdd', member=> { //! ,MEDOOO_96
+   let rwlc = JSON.parse(fs.readFileSync('./AutoRole.json' , 'utf8'));  //سوي ملف باسم AutoRole.json //! ,MEDOOO_96
+    member.addRole(member.guild.roles.find("name","هنا اسم الرول ")); //! ,MEDOOO_96
+    }); //! ,MEDOOO_96	   
  
     if(args[1] && args[1] === 'create') {  //MEDOOO_96#6699
       if(level[author.id].level < 10) return message.channel.send('**# يجب أن يكون لديك 10 مستويات لعمل كلان , لتجميع مستويات تفاعل بالشات وسيتم حساب النقاط**');
