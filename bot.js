@@ -42,6 +42,12 @@ client.on('message', msg => {  //MEDOOO_96#6699
     }
   });
 
+ client.on('message', msg => {  //MEDOOO_96#6699
+    if (msg.content === 'كسمك') {  //MEDOOO_96#6699
+      msg.reply('**بس يانجس **');  //MEDOOO_96#6699
+    }
+  });
+
 
 
 
