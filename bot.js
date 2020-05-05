@@ -79,7 +79,7 @@ ${prefix}emoji <EmojiID>`);
   if (message.channel.type === "dm") {    //MEDOOO_96#6699
 
       message.channel.startTyping();    //MEDOOO_96#6699
-      setTimeout(() => {    //WESO#0001
+      setTimeout(() => {    //MEDOOO_96#6699
         message.channel.stopTyping();    //MEDOOO_96#6699
       }, Math.random() * (1 - 3) + 1 * 1000);  //MEDOOO_96#6699
    
@@ -175,9 +175,9 @@ client.on('message',async message => {  //MEDOOO_96#6699
         };
  
         system[author.id] = {  //MEDOOO_96#6699
-          clan: nameClan,  //WESO#0001
+          clan: nameClan,  //MEDOOO_96#6699
           joinedAt: new Date().toLocaleString(),  //MEDOOO_96#6699
-          clanLevel: 0,  //WESO#0001
+          clanLevel: 0,  //MEDOOO_96#6699
           creator: message.author.id  //MEDOOO_96#6699
         };
  
@@ -192,8 +192,8 @@ client.on('message',async message => {  //MEDOOO_96#6699
       if(!clans[clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send('**# يجب عليك ان تكون اداري بالكلان**');
       let mention = message.mentions.users.first();  //MEDOOO_96#6699
       if(!mention) return message.channel.send('**# منشن شخص لدعوته للكلان**');  //MEDOOO_96#6699
-      if(clans[clan].members.includes(mention.id)) return message.channel.send("**# هذا العضو بالكلان بالفعل**");  //WESO#0001
-      if(clans[clan].members.length === 10) return message.channel.send("**# هذا الكلان وصل للحد الاقصى من الاعضاء يمكنك**");  //WESO#0001
+      if(clans[clan].members.includes(mention.id)) return message.channel.send("**# هذا العضو بالكلان بالفعل**");  //MEDOOO_96#6699
+      if(clans[clan].members.length === 10) return message.channel.send("**# هذا الكلان وصل للحد الاقصى من الاعضاء يمكنك**");  //MEDOOO_96#6699
    //MEDOOO_96#6699  //MEDOOO_96#6699  //MEDOOO_96#6699//MEDOOO_96#6699 //MEDOOO_96#6699
       let m = await message.channel.send(`**${mention} # \`${clan}\`, تم دعوتك لدخول الكلان**\n\n - لقبول الدعوة \`نعم\`\n - لرفض الدعوة \`لا\``);
       let awaiting = await message.channel.awaitMessages(r => r.author.id === mention.id, {max: 1, time: 20000, errors:['time']}).then(collected => {
